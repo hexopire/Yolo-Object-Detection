@@ -1,90 +1,66 @@
-## YOLO Real Time Object Detection
+YOLO Real Time Object Detection
+This project implements real-time object detection via video, webcam, and image detection using the YOLO algorithm. YOLO (You Only Look Once) is an object detection algorithm that is efficient and fast. This implementation uses pre-trained weights for YOLOv3 in Python.
 
-This project implements a real time object detection via video, webcam and image detection using YOLO algorithm. YOLO is a object detection algorithm which stand for You Only Look Once. I've implemented the algorithm from scratch in Python using pre-trained weights. YOLOv3 was published in research paper: <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf" rel="nofollow">YOLOv3: An Incremental Improvement: Joseph Redmon, Ali Farhadi</a> It's originally implemented in <a href="https://github.com/pjreddie/darknet">YOLOv3</a>.
+Overview:
+YOLOv3 is implemented using pre-trained weights for real-time object detection.
+COCO dataset is used for training the model.
+This project can perform real-time detection via the command prompt or a graphical user interface (GUI).
+Demo Images:
+A USA Real-Time Road Detection:
 
-COCO dataset is used for training.
+A UK Real-Time Road Detection:
 
-Real time detection can be use via command prompt or GUI.
+Real-Time Webcam Detection:
 
-<table>
-  <tbody>
-	<tr align="center">
-		<th><strong>A USA Real-Time Road Detection</strong></th>
-	</tr>
-	<tr align="center">
-		<td><img src="https://github.com/muhammadshiraz/YOLO-Real-Time-Object-Detection/blob/master/doc/detector1.gif"></td>		
-	</tr>
-	<tr align="center">
-		<th><strong>A UK Real-Time Road Detection</strong></th>
-	</tr>
-	<tr align="center">
-		<td><img src="https://github.com/muhammadshiraz/YOLO-Real-Time-Object-Detection/blob/master/doc/detector2.gif"></td>
-	</tr>
-	<tr align="center">
-		<th><strong>A Real-Time Webcam Detection</strong></th>
-	</tr>
-	<tr align="center">
-		<td style="width: 100%;"><img src="https://github.com/muhammadshiraz/YOLO-Real-Time-Object-Detection/blob/master/doc/webcam_detector.jpg"></td>
-	</tr>
-</tbody>
-</table>
+About YOLO:
+YOLO (You Only Look Once) was introduced in 2016 and became quickly popular due to its speed compared to other deep learning algorithms. With a GPU, YOLO can process over 45 frames per second, whereas on a CPU it can process about 1 frame per second. This makes it ideal for real-time object detection applications.
 
-Yolo is a deep learning algorythm which came out on may 2016 and it became quickly so popular because it’s so fast compared with the previous deep learning algorythm.
-With yolo we can detect real time objects at a relatively high speed. With a GPU we would be able to process over 45 frames/second while with a CPU around a frame per second.
+Requirements:
+OpenCV 4.2.0
+Python 3.6
+Quick Start:
+Download the official YOLOv3 weights from YOLOv3 weights and place them in a folder called weights.
+Download the official YOLOv3-tiny weights from YOLOv3-tiny weights and place them in a folder called weights.
+Download the YOLOv3 config file from YOLOv3 config and place it in a folder called cfg.
+Download the YOLOv3-tiny config file from YOLOv3-tiny config and place it in a folder called cfg.
+Dependencies:
+opencv
+numpy
+Install dependencies:
+To install required dependencies, run the following command:
 
-OpenCV dnn module supports running inference on pre-trained deep learning models from popular frameworks like Caffe, Torch and TensorFlow.
+bash
+Copy
+pip install numpy opencv-python
+How to use:
+Clone the repository:
 
-## Requirement
-<ul>
-<li>OpenCV 4.2.0</li>
-<li>Python 3.6</li>
-</ul>
+bash
+Copy
+git clone https://github.com/yourusername/YOLO-Real-Time-Object-Detection.git
+Navigate to the project directory:
 
-## Quick start
-<ul>
-  <li>Download official <a href="https://pjreddie.com/media/files/yolov3.weights" rel="nofollow">yolov3.weights</a> and place it under a folder called weight.</li>
-  <li>Download official <a href="https://pjreddie.com/media/files/yolov3-tiny.weights" rel="nofollow">yolov3-tiny.weights</a> and place it under a folder called weight.</li>
-  <li>Download <a href="https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg">yolov3.cfg</a> and place it under a folder called cfg.</li>
-  <li>Download <a href="https://github.com/pjreddie/darknet/blob/master/cfg/yolov3-tiny.cfg">yolov3-tiny.cfg</a> and place it under a folder called cfg.</li>
-</ul>
+bash
+Copy
+cd YOLO-Real-Time-Object-Detection
+To view the USA Real-Time Road Detection:
 
-## Dependencies
-<ul>
-<li>opencv</li>
-<li>numpy</li>
-</ul>
+bash
+Copy
+python real_time_yolo_detector1.py
+To view the UK Real-Time Road Detection:
 
-## Install dependencies
-<p><code>pip install numpy opencv-python</code></p>
+bash
+Copy
+python real_time_yolo_detector2.py
+To use real-time webcam detection:
 
-## How to use?
-<ol>
-  <li>Clone the repository</li>
-  <p><code>git clone https://github.com/muhammadshiraz/YOLO-Real-Time-Object-Detection.git</code></p>
-</ol>
-<ol start="2">
-  <li>Move to the directory</li>
-  <p><code>cd YOLO-Real-Time-Object-Detection</code></p>
-</ol>
-<ol start="3">
-  <li>To view the UK Real-Time Road Detection</li>
-  <p><code>python real_time_yolo_detector1.py</code></p>
-</ol>
-<ol start="4">
-  <li>To view the USA Real-Time Road Detection</li>
-  <p><code>python real_time_yolo_detector2.py</code></p>
-</ol>
-<ol start="5">
-  <li>To use in real-time on webcam</li>
-  <p><code>python real_time_yolo_webcam.py</code></p>
-</ol>
+bash
+Copy
+python real_time_yolo_webcam.py
+Graphical User Interface (GUI) Screenshots:
+USA Real-Time Road Detection:
 
-## Graphical User Interface:
-#### A USA Real-Time Road Detection
-<img src="https://user-images.githubusercontent.com/45601530/79018190-a4dff500-7b8c-11ea-8866-119735d7c8fc.jpg">
+UK Real-Time Road Detection:
 
-#### A UK Real-Time Road Detection
-<img src="https://user-images.githubusercontent.com/45601530/79018201-aad5d600-7b8c-11ea-9844-b93a98fd0e00.jpg">
-
-#### A Real-Time Webcam Detection
-<img src="https://github.com/muhammadshiraz/YOLO-Real-Time-Object-Detection/blob/master/doc/webcam_detector.jpg">
+Real-Time Webcam Detection:
